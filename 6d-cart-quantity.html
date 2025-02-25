@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart quantity buttons</title>
+</head>
+<body>
+  <button onclick="
+  console.log(`cart quantity:${cartQuantity}`);
+  ">Show Quantity
+  </button>
+
+  <button onclick="
+    if(cartQuantity>=10){
+      console.log('the cart is full');
+    }else{
+    cartQuantity=cartQuantity+1;
+    console.log(`cart quantity:${cartQuantity}`);
+    }
+  ">Add to cart
+  </button>
+
+  <button onclick="
+    if(cartQuantity + 2 > 10){
+      console.log('the cart is full');
+    }else{
+    cartQuantity += 2;
+    console.log(`cart quantity:${cartQuantity}`);
+    }
+    ">+2</button>
+
+  <button onclick="
+    if(cartQuantity + 3 > 10){
+      console.log('the cart is full');
+    }else{
+    cartQuantity=cartQuantity+3;
+    console.log(`cart quantity:${cartQuantity}`);
+    }
+    ">+3</button>
+
+  <button onclick="
+    cartQuantity=0;
+    console.log('cart was reset');
+    console.log(`cart quantity:${cartQuantity}`);
+    
+  ">Reset Cart</button>
+
+  <button onclick="
+    if(cartQuantity + 4 > 10){
+      console.log('the cart is full');
+    }else{
+    cartQuantity=cartQuantity+4;
+    console.log(`cart quantity:${cartQuantity}`);
+    }
+    ">+4</button>
+
+<button onclick="
+  if(cartQuantity + 5 > 10){
+      console.log('the cart is full');
+  }else{
+  cartQuantity=cartQuantity+5;
+  console.log(`cart quantity:${cartQuantity}`);
+  }
+    ">+5</button>
+
+<button onclick="
+  if(cartQuantity-1 < 0){
+    console.log('Not enough items in the cart');
+  }else{
+  cartQuantity=cartQuantity-1;
+  console.log(`one item removed:cart quantity:${cartQuantity}`);
+  }
+  ">Remove from cart
+</button>
+
+<button onclick="
+  if(cartQuantity-2 < 0){
+    console.log('Not enough items in the cart');
+  }else{
+  cartQuantity-=2;
+  console.log(`two items removed:cart quantity:${cartQuantity}`);
+  }
+  ">-2
+</button>
+
+<button onclick="
+if(cartQuantity-3 < 0){
+    console.log('Not enough items in the cart');
+  }else{
+  cartQuantity-=3;
+  console.log(`three items removed:cart quantity:${cartQuantity}`);
+  }
+  ">-3
+</button>
+
+  <script>
+    let cartQuantity = 0;
+  </script>
+
+</body>
+</html>
