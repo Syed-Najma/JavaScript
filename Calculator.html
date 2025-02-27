@@ -8,25 +8,21 @@
 <body>
   <p>
     <button onclick="
-    calculation += '1';
-    console.log(calculation);
+    calculator('1');
     ">1</button>
 
   <button
     onclick="
-    calculation += '2';
-    console.log(calculation);"
-    >2</button>
+    calculator('2');
+    ">2</button>
 
   <button
     onclick="
-    calculation += '3';
-    console.log(calculation);
+    calculator('3');
     ">3</button>
 
   <button onclick="
-    calculation += ' + ';
-    console.log(calculation);
+    calculator('+');
   ">
     +
   </button>
@@ -36,23 +32,19 @@
 
   <p>
     <button onclick="
-      calculation += '4';
-      console.log(calculation);
+      calculator('4');
     ">4</button>
 
    <button onclick="
-      calculation += '5';
-      console.log(calculation);
+      calculator('5');
     ">5</button>
 
     <button onclick="
-      calculation += '6';
-      console.log(calculation);
+     calculator('6');
     ">6</button>
 
     <button onclick="
-      calculation += ' - ';
-      console.log(calculation);
+      calculator(' - ')
       ">
       -
     </button>
@@ -62,46 +54,37 @@
 
   <p>
     <button onclick="
-      calculation += '7';
-      console.log(calculation);
+      calculator('7');
     ">7</button>
 
     <button onclick="
-      calculation += '8';
-      console.log(calculation);
+      calculator('8');
     ">8</button>
 
     <button onclick="
-      calculation += '9';
-      console.log(calculation);
+      calculator('9');
     ">9</button>
 
     <button onclick="
-      calculation += ' * ';
-      console.log(calculation);
-      ">
-      *
-    </button>
+     calculator('*');
+    ">*</button>
   </p>
 
   <p>
     <button onclick="
-      calculation += ' 0 ';
-      console.log(calculation);
+      calculator('0');
       ">
       0
     </button>
 
     <button onclick="
-      calculation += ' . ';
-      console.log(calculation);
+      calculator('.');
       ">
       .
     </button>
 
     <button onclick="
-      calculation += ' / ';
-      console.log(calculation);
+      calculator('/');
       ">
       /
     </button>
@@ -118,6 +101,10 @@
 
   <script>
     let calculation='';
+    function calculator(value){
+      calculation += value;
+      console.log(calculation);
+    }
   </script>
 
 </body>
