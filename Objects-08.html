@@ -51,7 +51,47 @@
     const jsonString = JSON.stringify(product2);
 
     console.log(JSON.parse(jsonString));
+    console.log(typeof JSON);
 
-  </script>
+    //Auto-Boxing
+    console.log('hello'.length);
+    console.log('good day'.toUpperCase());
+
+    //hello ,good day are special objects(feature:autoboxing)
+    
+    const ob1={
+      message:'heyy'
+    };
+
+    const ob2 = ob1; //copy by reference
+    console.log(ob2);
+
+    ob1.message='good job';
+    console.log(ob1);
+    console.log(ob2);
+
+    ob3 ={
+      message:'good job'
+    };
+
+    console.log(ob3 === ob1);//direct comparison
+    console.log(ob2 === ob1);//comparison with reference
+
+    ob4 ={
+      message:'good job',
+      price:599
+    };
+    //const message=ob4.message;
+    const {message , price} = ob4;
+    console.log(message);
+    console.log(price);
+
+    const ob5 = {
+      message
+    };
+    console.log(ob5);
+
+    
+    </script>
 </body>
 </html>
