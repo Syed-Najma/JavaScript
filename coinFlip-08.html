@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+</head>
+<body>
+  
+    <button onclick="
+     playerMove('heads'); ">heads</button>
+    <button onclick="
+    playerMove('tails');">tails</button>
+ 
+  <script>
+    let scoreFlip = JSON.parse(localStorage.getItem('scoreFlip')) || {
+      wins:0,
+      losses:0
+    };
+    
+    function playerMove(guess){
+      
+      const random = Math.random();
+    //const guess = 'heads';
+
+    if (random < 0.4) {
+      result = 'heads';  
+    }
+    else {
+      result = 'tails';
+    }
+
+    if (guess == result) {
+      result='You win';
+      console.log(result);
+      scoreFlip.wins++;
+     }
+     else{
+      result='You lose';
+      console.log(result);
+      scoreFlip.losses++;
+     } 
+     console.log(scoreFlip);
+     
+    localStorage.setItem('scoreFlip', JSON.stringify(scoreFlip));
+    }
+    
+    
+  </script>
+</body>
+</html>

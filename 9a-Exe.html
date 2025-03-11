@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Exercise</title>
+</head>
+<body>
+  <button class="button-9a">9a</button>
+
+  <button class="button-9b">9b</button>
+
+  <button class="head-button"onclick="
+   changeButton();
+   ">heads</button>
+
+  <button class="tailB"
+  changeButton();
+  >tails</button>
+
+  <p class="choosetag"></p>
+  <script>
+    
+   button1 = document.querySelector('.button-9a');
+   console.log(button1);
+
+   button2 = document.querySelector('.button-9b').innerHTML = '9bdone!';
+
+  function changeButton(){
+     headB= document.querySelector('.head-button').innerHTML;
+     if(headB){
+       document.querySelector('.choosetag').innerHTML = `You choose:${headB}`;
+    }
+    else if(tailB){
+      document.querySelector('.choosetag').innerHTML = `You choose:${tailB}`;
+    }
+  //  choosetag = head-button;
+  //  if( choosetag === 'head')
+  //  console.log(`you choose:${headbutt}`);
+  }
+  </script>
+</body>
+</html>
