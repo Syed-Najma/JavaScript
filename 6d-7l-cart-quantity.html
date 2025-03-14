@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart quantity buttons</title>
+</head>
+<body>
+  <button onclick="
+  console.log(`cart quantity:${cartQuantity}`);
+  ">Show Quantity
+  </button>
+
+  <button onclick="
+  updateCartQuantity(1,10);
+  ">Add to cart
+  </button>
+
+  <button onclick="
+    updateCartQuantity(2,10);
+    ">+2</button>
+
+  <button onclick="
+   updateCartQuantity(3,10);
+    ">+3</button>
+
+  <button onclick="
+    cartQuantity=0;
+    console.log('cart was reset');
+    console.log(`cart quantity:${cartQuantity}`);
+    ">Reset Cart</button>
+
+  <button onclick="
+   updateCartQuantity(4,10);
+    ">+4</button>
+
+<button onclick="
+ updateCartQuantity(5,10);
+    ">+5</button>
+
+<button onclick="
+  removeFromcart(1);
+  ">Remove from cart
+</button>
+
+<button onclick="
+   removeFromcart(2);
+  ">-2
+</button>
+
+<button onclick="
+removeFromcart(3);
+  ">-3
+</button>
+
+
+  <script>
+    let cartQuantity = 0;
+    function updateCartQuantity(value,limit){
+      if(cartQuantity + value >=limit){
+          console.log('the cart is full');
+          return;
+        }else{
+        cartQuantity=cartQuantity+value;
+        console.log(`cart quantity:${cartQuantity}`);
+      }
+
+    }
+
+    function removeFromcart(valuesub){
+      if(cartQuantity-valuesub < 0){
+         console.log('Not enough items in the cart');
+         return;
+      }else{
+        cartQuantity=cartQuantity-valuesub;
+        console.log(`one item removed:cart quantity:${cartQuantity}`);
+      }
+
+    }
+  </script>
+
+</body>
+</html>

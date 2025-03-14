@@ -10,15 +10,6 @@
 
   <button class="button-9b">9b</button>
 
-  <button class="head-button"onclick="
-   changeButton();
-   ">heads</button>
-
-  <button class="tailB"
-  changeButton();
-  >tails</button>
-
-  <p class="choosetag"></p>
   <script>
     
    button1 = document.querySelector('.button-9a');
@@ -26,18 +17,6 @@
 
    button2 = document.querySelector('.button-9b').innerHTML = '9bdone!';
 
-  function changeButton(){
-     headB= document.querySelector('.head-button').innerHTML;
-     if(headB){
-       document.querySelector('.choosetag').innerHTML = `You choose:${headB}`;
-    }
-    else if(tailB){
-      document.querySelector('.choosetag').innerHTML = `You choose:${tailB}`;
-    }
-  //  choosetag = head-button;
-  //  if( choosetag === 'head')
-  //  console.log(`you choose:${headbutt}`);
-  }
   </script>
 </body>
 </html>
