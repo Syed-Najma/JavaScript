@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and loops</title>
+</head>
+<body>
+  <script>
+    const myArray =[10,20,30];
+    console.log(myArray);
+
+    console.log(myArray[0]);
+    myArray[0]=80;
+    console.log(myArray);
+
+    //inside Array we can put any type of value
+    [1,'hey',{name:'najma'},[1,2,3]]
+
+    console.log(typeof[1,2,3]);//array is a special type of object
+
+    console.log(Array.isArray([1,2]));
+
+    console.log(myArray.length);
+    
+    myArray.push(100);
+    console.log(myArray);
+
+    myArray.splice(0,1);
+    console.log(myArray);
+  </script>
+</body>
+</html>
