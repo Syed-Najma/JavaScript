@@ -7,6 +7,7 @@
   </head>
   <body>
     <script>
+      /*
       const myArray =[10,20,30];
       console.log(myArray);
 
@@ -77,6 +78,43 @@
         numDoubled.push(num*2);
       }
       console.log(numDoubled);
+      */
+
+      //arrays are references
+      const array1= [1,2,3];
+      const array2 = array1;
+      array2.push(4);
+      console.log(array1);
+      console.log(array2);
+
+      //get elemets out of an array
+      const[firstvalue, secondvalue] = [1,2,3];
+
+      //using break & continue in loop
+      for(let i=0; i<10; i++){ // automatic increment in for loop
+        if(i % 3 === 0){
+          continue;
+        }
+
+        console.log(i);
+
+        if(i === 8){
+          break;
+        }
+      }
+
+      let i=1;
+      while( i<=10){
+        if(i%2 === 0){
+          i++; //we hv to specify increment otherwise it will go to the infinite loop
+          continue;
+        console.log(i);
+        i++;
+        }
+      }
+
+     
+
     </script>
   </body>
 </html>
