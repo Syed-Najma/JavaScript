@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>arrays and loops part2</title>
+</head>
+<body>
+  <script>
+
+    function findString(str,stf){
+      // const str =['hii','world','search','good'];
+      // const stf='search';
+      for(let i=0; i<=str.length;i++){
+        if(str[i] === stf){
+          return i;
+        }
+      }
+      return -1;
+    }
+    console.log(findString(['hii','world','search','good','search'], 'search'));
+    console.log(findString(['hii','world','search','good'], 'mee'));
+
+    //11r-exe
+    function removeEggs(foods){
+
+      const result=[];
+      for(let i=0; i<=foods.length; i++){
+        if(foods[i] === 'egg'){
+          continue;
+        }
+        result.push(foods[i]);
+      }
+      return result;
+    }
+
+    console.log(removeEggs(['apple','egg','egg','pineapple']));
+  </script>
+</body>
+</html>

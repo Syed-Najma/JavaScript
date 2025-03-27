@@ -81,7 +81,7 @@
       */
 
       //arrays are references
-      const array1= [1,2,3];
+      /*const array1= [1,2,3];
       const array2 = array1;
       array2.push(4);
       console.log(array1);
@@ -112,7 +112,24 @@
         i++;
         }
       }
+        */
 
+      function doubleArray(nums){
+      
+      const numDoubled = [];
+
+      for(let i=0; i<nums.length; i++){
+        const num = nums[i];
+        if (num === 0){
+          return numDoubled;
+        }
+        numDoubled.push(num*2);
+      }
+      return numDoubled;
+    }
+
+    console.log(doubleArray([2,2,3]));
+    console.log(doubleArray([2,3,4,0,8]));
      
 
     </script>
