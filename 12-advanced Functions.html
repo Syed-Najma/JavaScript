@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <script>
+    greeting();//hoisting :calling a func before its created
+
+    function greeting(){
+      console.log('hiii');
+    }
+    greeting();
+
+    const func1 = function fname(){ //in this format hoisting is not possible
+      console.log('heyyy');
+
+    }
+    console.log(func1);
+    console.log(typeof(func1));
+    func1();
+
+    const object ={
+      num:2,
+      fun:function(){
+        console.log('using objects');
+      }
+    };
+    object.fun();
+
+    function display(param){
+      console.log(param);
+    }
+    display(2);
+
+    function run(param){
+      param();
+    }
+
+    run(function(){
+      console.log('function as a parameter');
+    });
+
+    //set timeout
+    setTimeout(function(){
+      console.log('timeout');
+      console.log('timeout2');
+    },3000);
+
+    //asynchronous code
+    console.log('next line');
+
+    setInterval( function(){
+      console.log('interval');
+    },3000);
+
+    console.log('next line 2');
+  </script>
+</body>
+</html>
