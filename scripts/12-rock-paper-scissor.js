@@ -48,6 +48,20 @@ document.querySelector('.js-scissor-button').addEventListener('click',()  =>{
   playGame('Scissors');
 });
 
+document.querySelector('.js-autoplay-button').addEventListener('click',() =>{
+  autoPlay();
+});
+
+document.body.addEventListener('keydown',(event) => {
+  if(event.key === 'r'){
+    playGame('Rock');
+  } else if(event.key === 'p'){
+    playGame('Paper');
+  } else if(event.key === 's'){
+    playGame('Scissors');
+  }
+});
+
 //use of functions
 function playGame(playerMove){
   let result;
